@@ -2,23 +2,32 @@
     "use strict";
     document.addEventListener("DOMContentLoaded", (() => {
         try {
-            const heroSlider = document.querySelector(".hero-slider");
-            if (!heroSlider) return;
-            new Swiper(heroSlider, {
-                loop: true,
-                effect: "fade",
-                fadeEffect: {
-                    crossFade: true
-                },
-                speed: 1200,
-                autoplay: {
-                    delay: 3e3,
-                    disableOnInteraction: false
-                },
-                allowTouchMove: false
-            });
+            const sliders = document.querySelectorAll(".about__slider");
+            if (!sliders.length || typeof Swiper === "undefined") return;
+            sliders.forEach((slider => {
+                new Swiper(slider, {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    speed: 700,
+                    loop: true,
+                    grabCursor: true,
+                    autoplay: {
+                        delay: 5e3,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    },
+                    pagination: {
+                        el: slider.querySelector(".about__pagination"),
+                        clickable: true
+                    },
+                    touchRatio: 1,
+                    touchAngle: 45,
+                    resistance: true,
+                    resistanceRatio: .85
+                });
+            }));
         } catch (error) {
-            console.error("Hero slider error:", error);
+            console.error("About Swiper error:", error);
         }
     }));
     document.addEventListener("DOMContentLoaded", (() => {
@@ -183,6 +192,136 @@
                 closeMenu();
             }));
         }));
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        try {
+            const heroSlider = document.querySelector(".hero-slider");
+            if (!heroSlider) return;
+            new Swiper(heroSlider, {
+                loop: true,
+                effect: "fade",
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 1200,
+                autoplay: {
+                    delay: 3e3,
+                    disableOnInteraction: false
+                },
+                allowTouchMove: false
+            });
+        } catch (error) {
+            console.error("Hero slider error:", error);
+        }
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        try {
+            const faq = document.querySelector(".faq");
+            if (!faq) return;
+            const items = faq.querySelectorAll(".faq__item");
+            if (!items.length) return;
+            const closeItem = item => {
+                const answer = item.querySelector(".faq__answer");
+                if (!answer) return;
+                const currentHeight = answer.scrollHeight;
+                answer.style.height = `${currentHeight}px`;
+                requestAnimationFrame((() => {
+                    answer.style.height = "0px";
+                }));
+                item.classList.remove("faq__item--active");
+                answer.addEventListener("transitionend", (() => {
+                    if (!item.classList.contains("faq__item--active")) answer.style.height = "0px";
+                }), {
+                    once: true
+                });
+            };
+            const openItem = item => {
+                const answer = item.querySelector(".faq__answer");
+                if (!answer) return;
+                item.classList.add("faq__item--active");
+                const height = answer.scrollHeight;
+                answer.style.height = `${height}px`;
+                answer.addEventListener("transitionend", (() => {
+                    if (item.classList.contains("faq__item--active")) answer.style.height = "auto";
+                }), {
+                    once: true
+                });
+            };
+            items.forEach((item => {
+                const button = item.querySelector(".faq__question");
+                const answer = item.querySelector(".faq__answer");
+                if (!button || !answer) return;
+                if (item.classList.contains("faq__item--active")) answer.style.height = "auto"; else answer.style.height = "0px";
+                button.addEventListener("click", (() => {
+                    const isActive = item.classList.contains("faq__item--active");
+                    items.forEach((faqItem => {
+                        if (faqItem !== item && faqItem.classList.contains("faq__item--active")) closeItem(faqItem);
+                    }));
+                    if (isActive) closeItem(item); else openItem(item);
+                }));
+            }));
+        } catch (error) {
+            console.error("FAQ error:", error);
+        }
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const slider = document.querySelector(".reviews__slider");
+        const pagination = document.querySelector(".reviews__pagination");
+        const prevBtn = document.querySelector(".reviews__prev");
+        const nextBtn = document.querySelector(".reviews__next");
+        if (!slider || !pagination || !prevBtn || !nextBtn || typeof Swiper === "undefined") return;
+        new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            speed: 700,
+            loop: false,
+            watchOverflow: true,
+            navigation: {
+                nextEl: nextBtn,
+                prevEl: prevBtn,
+                disabledClass: "is-disabled"
+            },
+            pagination: {
+                el: pagination,
+                clickable: true,
+                bulletClass: "reviews-dot",
+                bulletActiveClass: "active"
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 15
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            },
+            on: {
+                init(swiper) {
+                    toggleControls(swiper);
+                },
+                resize(swiper) {
+                    toggleControls(swiper);
+                },
+                lock(swiper) {
+                    toggleControls(swiper);
+                },
+                unlock(swiper) {
+                    toggleControls(swiper);
+                }
+            }
+        });
+        function toggleControls(swiper) {
+            const hide = swiper.isLocked;
+            pagination.style.display = hide ? "none" : "";
+            prevBtn.style.display = hide ? "none" : "";
+            nextBtn.style.display = hide ? "none" : "";
+        }
     }));
     window["FLS"] = true;
 })();
