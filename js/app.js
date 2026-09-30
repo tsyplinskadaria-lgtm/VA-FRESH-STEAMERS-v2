@@ -323,5 +323,56 @@
             nextBtn.style.display = hide ? "none" : "";
         }
     }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const stats = document.querySelector(".why-choose__stats");
+        if (!stats) return;
+        const values = stats.querySelectorAll(".why-choose__stat-value");
+        const animateValue = element => {
+            const target = Number(element.dataset.target);
+            const suffix = element.dataset.suffix || "";
+            const duration = 1800;
+            let startTime = null;
+            const animate = currentTime => {
+                if (!startTime) startTime = currentTime;
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const currentValue = Math.floor(target * easeOut);
+                element.textContent = currentValue.toLocaleString("en-US") + suffix;
+                if (progress < 1) requestAnimationFrame(animate); else element.textContent = target.toLocaleString("en-US") + suffix;
+            };
+            requestAnimationFrame(animate);
+        };
+        const observer = new IntersectionObserver(((entries, observer) => {
+            entries.forEach((entry => {
+                if (entry.isIntersecting) {
+                    values.forEach(((value, index) => {
+                        setTimeout((() => {
+                            animateValue(value);
+                        }), index * 150);
+                    }));
+                    observer.unobserve(entry.target);
+                }
+            }));
+        }), {
+            threshold: .3
+        });
+        observer.observe(stats);
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top <= window.innerHeight && rect.bottom >= 0;
+        }
+        function handleScroll() {
+            document.querySelectorAll(".animate").forEach((element => {
+                if (isInViewport(element)) {
+                    element.classList.add("active");
+                    element.classList.remove("animate");
+                }
+            }));
+        }
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+    }));
     window["FLS"] = true;
 })();
