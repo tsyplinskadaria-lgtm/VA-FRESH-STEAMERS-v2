@@ -264,65 +264,28 @@
             console.error("FAQ error:", error);
         }
     }));
-    document.addEventListener("DOMContentLoaded", (() => {
-        const slider = document.querySelector(".reviews__slider");
-        const pagination = document.querySelector(".reviews__pagination");
-        const prevBtn = document.querySelector(".reviews__prev");
-        const nextBtn = document.querySelector(".reviews__next");
-        if (!slider || !pagination || !prevBtn || !nextBtn || typeof Swiper === "undefined") return;
-        new Swiper(slider, {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            speed: 700,
-            loop: false,
-            watchOverflow: true,
-            navigation: {
-                nextEl: nextBtn,
-                prevEl: prevBtn,
-                disabledClass: "is-disabled"
+    new Swiper(".reviews__slider", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".reviews__button--next",
+            prevEl: ".reviews__button--prev"
+        },
+        pagination: {
+            el: ".reviews__pagination",
+            clickable: true
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
             },
-            pagination: {
-                el: pagination,
-                clickable: true,
-                bulletClass: "reviews-dot",
-                bulletActiveClass: "active"
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 15
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 15
-                },
-                1200: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                }
-            },
-            on: {
-                init(swiper) {
-                    toggleControls(swiper);
-                },
-                resize(swiper) {
-                    toggleControls(swiper);
-                },
-                lock(swiper) {
-                    toggleControls(swiper);
-                },
-                unlock(swiper) {
-                    toggleControls(swiper);
-                }
+            1100: {
+                slidesPerView: 3,
+                spaceBetween: 24
             }
-        });
-        function toggleControls(swiper) {
-            const hide = swiper.isLocked;
-            pagination.style.display = hide ? "none" : "";
-            prevBtn.style.display = hide ? "none" : "";
-            nextBtn.style.display = hide ? "none" : "";
         }
-    }));
+    });
     document.addEventListener("DOMContentLoaded", (() => {
         const stats = document.querySelector(".why-choose__stats");
         if (!stats) return;
@@ -373,6 +336,129 @@
         }
         window.addEventListener("scroll", handleScroll);
         handleScroll();
+    }));
+    new Swiper(".before-after__slider", {
+        slidesPerView: 4,
+        speed: 500,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".before-after__next",
+            prevEl: ".before-after__prev"
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        allowTouchMove: false,
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            600: {
+                slidesPerView: 2
+            },
+            992: {
+                slidesPerView: 3
+            }
+        }
+    });
+    document.querySelectorAll(".compare").forEach((compare => {
+        const line = compare.querySelector(".compare__line");
+        const after = compare.querySelector(".compare__after");
+        let active = false;
+        function move(e) {
+            const rect = compare.getBoundingClientRect();
+            let percent = (e.clientX - rect.left) / rect.width * 100;
+            percent = Math.max(0, Math.min(100, percent));
+            after.style.clipPath = `inset(0 0 0 ${percent}%)`;
+            line.style.left = percent + "%";
+        }
+        line.addEventListener("mousedown", (() => {
+            active = true;
+            compare.classList.add("is-dragging");
+        }));
+        window.addEventListener("mouseup", (() => {
+            active = false;
+            compare.classList.remove("is-dragging");
+        }));
+        window.addEventListener("mousemove", (e => {
+            if (!active) return;
+            move(e);
+        }));
+        line.addEventListener("touchstart", (() => {
+            active = true;
+            compare.classList.add("is-dragging");
+        }));
+        window.addEventListener("touchend", (() => {
+            active = false;
+            compare.classList.remove("is-dragging");
+        }));
+        window.addEventListener("touchmove", (e => {
+            if (!active) return;
+            move({
+                clientX: e.touches[0].clientX
+            });
+        }));
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const slider = document.querySelector(".before-after__slider-single");
+        const pagination = document.querySelector(".before-after__pagination");
+        const prevBtn = document.querySelector(".before-after__prev");
+        const nextBtn = document.querySelector(".before-after__next");
+        if (!slider || !pagination || !prevBtn || !nextBtn || typeof Swiper === "undefined") return;
+        new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            speed: 500,
+            loop: false,
+            watchOverflow: true,
+            allowTouchMove: false,
+            navigation: {
+                nextEl: nextBtn,
+                prevEl: prevBtn,
+                disabledClass: "is-disabled"
+            },
+            pagination: {
+                el: pagination,
+                clickable: true,
+                bulletClass: "before-after-dot",
+                bulletActiveClass: "active"
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 15
+                },
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            },
+            on: {
+                init(swiper) {
+                    toggleControls(swiper);
+                },
+                resize(swiper) {
+                    toggleControls(swiper);
+                },
+                lock(swiper) {
+                    toggleControls(swiper);
+                },
+                unlock(swiper) {
+                    toggleControls(swiper);
+                }
+            }
+        });
+        function toggleControls(swiper) {
+            const hide = swiper.isLocked;
+            pagination.style.display = hide ? "none" : "";
+            prevBtn.style.display = hide ? "none" : "";
+            nextBtn.style.display = hide ? "none" : "";
+        }
     }));
     window["FLS"] = true;
 })();
