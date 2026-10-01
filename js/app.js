@@ -460,5 +460,31 @@
             nextBtn.style.display = hide ? "none" : "";
         }
     }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const mapElement = document.querySelector("#business-map");
+        if (!mapElement) return;
+        try {
+            const latitude = 41.44454;
+            const longitude = -81.74569;
+            const map = L.map(mapElement, {
+                scrollWheelZoom: false,
+                zoomControl: true
+            }).setView([ latitude, longitude ], 12);
+            L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+                maxZoom: 19,
+                attribution: ""
+            }).addTo(map);
+            L.marker([ latitude, longitude ]).addTo(map).bindPopup(`\n        <strong>AV PRO Cleaners</strong><br>\n        Parma, Ohio\n      `);
+            map.getContainer().addEventListener("wheel", (event => {
+                if (!event.ctrlKey) return;
+                event.preventDefault();
+                if (event.deltaY < 0) map.zoomIn(); else map.zoomOut();
+            }), {
+                passive: false
+            });
+        } catch (error) {
+            console.error("Map initialization failed:", error);
+        }
+    }));
     window["FLS"] = true;
 })();
