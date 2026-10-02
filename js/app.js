@@ -265,8 +265,8 @@
         }
     }));
     new Swiper(".reviews__slider", {
-        slidesPerView: 1,
-        spaceBetween: 20,
+        slidesPerView: 1.2,
+        spaceBetween: 10,
         navigation: {
             nextEl: ".reviews__button--next",
             prevEl: ".reviews__button--prev"
@@ -278,7 +278,7 @@
         breakpoints: {
             768: {
                 slidesPerView: 2,
-                spaceBetween: 20
+                spaceBetween: 15
             },
             1100: {
                 slidesPerView: 3,
@@ -338,7 +338,8 @@
         handleScroll();
     }));
     new Swiper(".before-after__slider", {
-        slidesPerView: 4,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
         speed: 500,
         spaceBetween: 20,
         navigation: {
@@ -346,19 +347,28 @@
             prevEl: ".before-after__prev"
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".before-after__pagination",
             clickable: true
         },
         allowTouchMove: false,
         breakpoints: {
             0: {
-                slidesPerView: 1
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 15
             },
             600: {
-                slidesPerView: 2
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 20
             },
             992: {
-                slidesPerView: 3
+                slidesPerView: 3,
+                slidesPerGroup: 3
+            },
+            1200: {
+                slidesPerView: 3,
+                slidesPerGroup: 3
             }
         }
     });
