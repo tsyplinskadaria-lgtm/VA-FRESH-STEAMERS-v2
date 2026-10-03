@@ -7,16 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap&_v=20261003011837"
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap&_v=20261003190607"
     rel="stylesheet"> -->
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap&_v=20261003011837" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20261003011837" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?_v=20261003011837">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20261003011837" />
-	<link rel="stylesheet" href="./css/style.min.css?_v=20261003011837">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap&_v=20261003190607" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20261003190607" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?_v=20261003190607">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20261003190607" />
+	<link rel="stylesheet" href="./css/style.min.css?_v=20261003190607">
 	<title>Professional Carpet & Upholstery Cleaning in Cleveland & 50 Miles | VA Fresh Steamers</title>
 </head>
 
@@ -1973,58 +1973,100 @@
 
 			<!-- Form -->
 
-			<section id="quote" class="quote">
+			<section id="quote" class="quote bg-light">
+				<div class="quote__decor quote__decor--one"></div>
+				<!-- <div class="quote__decor quote__decor--two"></div>
+				<div class="quote__decor quote__decor--three"></div> -->
+
 				<div class="quote__container">
-					<div class="section-heading section-heading-center">
-						<p class="eyebrow">Get Your Free Quote</p>
 
-						<h2 class="title">
-							Request a free quote today
-						</h2>
+					<div class="quote__content">
 
-						<p class="description">
-							Fill out the form and our team will get back to you during business hours. No obligation, no
-							hidden fees.
-						</p>
-					</div>
+						<div class="quote__intro">
+							<div class="section-heading">
+								<span class="eyebrow"></span>
+								<h2 class="title">
+									Get a free
+									<strong>quote.</strong>
+								</h2>
 
-					<div class="quote__grid">
+								<p class="description">
+									Tell us what needs freshening up. We'll reply with a clear,
+									upfront price — no hidden fees, no pressure.
+								</p>
+							</div>
 
-						<div class="quote__form-wrap">
+
+							<div class="quote__image">
+								<img src="https://media.base44.com/images/public/6ab4308b755cd0bcf13e3ed7/0a6c87a75_generated_04d3413d.webp" alt="VA Fresh Steamers technician at work">
+
+								<div class="quote__image-overlay"></div>
+
+								<div class="quote__image-badge">
+									<span class="quote__image-badge-icon">VA</span>
+
+									<span>VA Fresh Steamers</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="quote__form-column">
+
 							<form class="quote__form">
 
-								<div class="quote__field">
-									<label for="quote-name">Name</label>
-									<input id="quote-name" type="text" name="name" placeholder="John Smith" required>
+								<div class="quote__fields">
+
+									<div class="quote__field">
+										<label for="quote-name">Name</label>
+
+										<input id="quote-name" type="text" name="name" placeholder="John Smith" required>
+									</div>
+
+									<div class="quote__field">
+										<label for="quote-phone">Phone</label>
+
+										<input id="quote-phone" type="tel" name="phone" placeholder="+1 (216) 217-4053" required>
+									</div>
+
+									<div class="quote__field">
+										<label for="quote-email">Email</label>
+
+										<input id="quote-email" type="email" name="email" placeholder="you@email.com" required>
+									</div>
+
+									<div class="quote__field">
+										<label for="quote-zip">Zip Code</label>
+
+										<input id="quote-zip" type="text" name="zip" placeholder="44129" required>
+									</div>
+
 								</div>
 
-								<div class="quote__field">
-									<label for="quote-email">Email</label>
-									<input id="quote-email" type="email" name="email" placeholder="you@email.com" required>
-								</div>
-
-								<div class="quote__field">
-									<label for="quote-phone">Phone</label>
-									<input id="quote-phone" type="text" name="phone" placeholder="(216) 000-0000" required>
-								</div>
-
-								<div class="quote__field">
-									<label for="quote-zip">Zip Code</label>
-									<input id="quote-zip" type="text" name="zip" placeholder="44129" required>
-								</div>
 
 								<div class="quote__field quote__field--full">
 									<label for="quote-service">Choose a Service</label>
 
-									<div class="quote__field-wrap">
+									<div class="quote__select">
 										<select id="quote-service" name="service" required>
 											<option value="">Select a service…</option>
-											<option value="Carpet Cleaning">Carpet Cleaning</option>
-											<option value="Upholstery Cleaning">Upholstery Cleaning</option>
-											<option value="Area Rug Cleaning">Area Rug Cleaning</option>
-											<option value="Mattress Cleaning">Mattress Cleaning</option>
+											<option value="Carpet Cleaning">
+												Carpet Cleaning
+											</option>
+											<option value="Upholstery Cleaning">
+												Upholstery Cleaning
+											</option>
+											<option value="Area Rug Cleaning">
+												Area Rug Cleaning
+											</option>
+											<option value="Mattress Cleaning">
+												Mattress Cleaning
+											</option>
 											<option value="Pet Stain & Odor Removal">
 												Pet Stain & Odor Removal
+											</option>
+											<option value="Tile & Grout Cleaning">
+												Tile & Grout Cleaning
 											</option>
 										</select>
 
@@ -2032,25 +2074,33 @@
 									</div>
 								</div>
 
-								<div class="quote__field quote__field--full">
-									<label for="quote-message">How Can We Help You?</label>
 
-									<textarea id="quote-message" name="message" rows="3" placeholder="Tell us about your mattress, stains, timing…"></textarea>
+								<div class="quote__field quote__field--full">
+									<label for="quote-message">
+										How Can We Help You?
+									</label>
+
+									<textarea id="quote-message" name="message" rows="4" placeholder="Tell us about your cleaning needs, stains, pets, room sizes…"></textarea>
 								</div>
 
+
 								<label class="quote__consent">
+
 									<input type="checkbox" name="consent">
 
 									<span>
-										I agree to be contacted about my request and accept the terms
-										& privacy policy.
+										I agree to be contacted about my request and accept the
+										terms & privacy policy.
 									</span>
+
 								</label>
+
 
 								<button type="submit" class="quote__submit">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 										<path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
 										</path>
+
 										<path d="m21.854 2.147-10.94 10.939"></path>
 									</svg>
 
@@ -2058,10 +2108,33 @@
 								</button>
 
 							</form>
+
+
+							<div class="quote__guarantee">
+
+								<div class="quote__guarantee-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+										</path>
+
+										<path d="m9 12 2 2 4-4"></path>
+									</svg>
+								</div>
+
+								<div class="quote__guarantee-content">
+									<h3>100% Satisfaction Guarantee</h3>
+
+									<p>
+										Not happy? We come back and make it right — at no extra cost.
+									</p>
+								</div>
+
+							</div>
+
 						</div>
 
-
 					</div>
+
 				</div>
 			</section>
 
@@ -2070,9 +2143,15 @@
 			<section class="info-map bg-dark" id="visit" aria-label="Business location and contact information">
 				<div class="info-map__header info-map__container">
 					<div class="section-heading section-heading-center">
-						<div class="eyebrow">
-							Visit Us
-						</div>
+
+						<span class="hero__badge">
+							<span class="hero__badge-dot">
+								<span class="hero__badge-ping"></span>
+								<span class="hero__badge-dot-inner"></span>
+							</span>
+
+							<span>Visit Us</span>
+						</span>
 
 						<h2 class="title">
 							Proudly Serving
@@ -2094,7 +2173,7 @@
 					</div>
 
 					<h3 class="info-map__card-title">
-						AV PRO Cleaners
+						VA Fresh Steamers
 					</h3>
 
 					<div class="info-map__details">
@@ -2112,7 +2191,7 @@
 								</span>
 
 								<p>
-									Parma, Ohio
+									3415 Norris Ave, Parma, OH 44134
 								</p>
 							</div>
 						</div>
@@ -2129,7 +2208,7 @@
 								</span>
 
 								<a href="tel:+12163155788">
-									+1 216-315-5788
+									+1 (216) 217-4053
 								</a>
 							</div>
 						</div>
@@ -2161,13 +2240,17 @@
 
 					</div>
 
-					<a class="info-map__button" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191408.31601635696!2d-81.74568948945313!3d41.44453881147158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2z0JrQu9GW0LLQu9C10L3QtCwg0J7Qs9Cw0LnQviwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1sen!2sus!4v1790858683563!5m2!1sen!2sus" target="_blank" rel="noopener noreferrer">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-							<polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+					<button type="submit" class="quote__submit">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+							</path>
+
+							<path d="m21.854 2.147-10.94 10.939"></path>
 						</svg>
 
-						Get Directions
-					</a>
+						<span>Get Directions</span>
+					</button>
+
 
 				</div>
 
@@ -2176,6 +2259,7 @@
 					<div class="info-map__map" id="business-map"></div>
 
 					<!-- Contact card -->
+
 					<div class="info-map__card hide-mob">
 
 						<div class="info-map__eyebrow">
@@ -2183,7 +2267,7 @@
 						</div>
 
 						<h3 class="info-map__card-title">
-							AV PRO Cleaners
+							VA Fresh Steamers
 						</h3>
 
 						<div class="info-map__details">
@@ -2201,7 +2285,7 @@
 									</span>
 
 									<p>
-										Parma, Ohio
+										3415 Norris Ave, Parma, OH 44134
 									</p>
 								</div>
 							</div>
@@ -2218,7 +2302,7 @@
 									</span>
 
 									<a href="tel:+12163155788">
-										+1 216-315-5788
+										+1 (216) 217-4053
 									</a>
 								</div>
 							</div>
@@ -2250,13 +2334,17 @@
 
 						</div>
 
-						<a class="info-map__button" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191408.31601635696!2d-81.74568948945313!3d41.44453881147158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2z0JrQu9GW0LLQu9C10L3QtCwg0J7Qs9Cw0LnQviwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1sen!2sus!4v1790858683563!5m2!1sen!2sus" target="_blank" rel="noopener noreferrer">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-								<polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+						<button type="submit" class="quote__submit">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+								</path>
+
+								<path d="m21.854 2.147-10.94 10.939"></path>
 							</svg>
 
-							Get Directions
-						</a>
+							<span>Get Directions</span>
+						</button>
+
 
 					</div>
 				</div>
@@ -2274,7 +2362,7 @@
 
 					<div class="footer__about">
 						<div class="footer__brand">
-							<img src="https://media.base44.com/images/public/user_6ab430490078079956a7e95a/4de9fa844_cropped-cropped-logo.webp" alt="VA Fresh Steamers" class="footer__logo">
+							<img src="img/main/logo.webp" alt="VA Fresh Steamers" class="footer__logo">
 
 							<div class="footer__brand-info">
 								<div class="footer__brand-name">
@@ -2455,10 +2543,10 @@
 		</footer>
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20261003011837"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20261003011837">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20261003190607"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20261003190607">
 	</script>
-	<script src="js/app.min.js?_v=20261003011837"></script>
+	<script src="js/app.min.js?_v=20261003190607"></script>
 </body>
 
 </html>

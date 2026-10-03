@@ -7,16 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap&_v=20261003011837"
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap&_v=20261003190607"
     rel="stylesheet"> -->
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap&_v=20261003011837" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20261003011837" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?_v=20261003011837">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20261003011837" />
-	<link rel="stylesheet" href="./css/style.min.css?_v=20261003011837">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap&_v=20261003190607" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20261003190607" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?_v=20261003190607">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20261003190607" />
+	<link rel="stylesheet" href="./css/style.min.css?_v=20261003190607">
 	<title>Single | VA Fresh Steamers</title>
 </head>
 
@@ -355,18 +355,67 @@
 
 								<h1 class="service-area__hero-title">
 									Couch &amp; Carpet Cleaning in
-									<em>Ohio City</em>
+									<strong>Ohio City</strong>
 								</h1>
 
-								<div class="service-area__hero-description">
-									<p>
-										We provide couch and carpet cleaning in Ohio City for customers
-										who want a thorough, practical deep clean. Our service is designed
-										for everyday soil, high-traffic areas, common spots, pet-related
-										buildup, and furniture that has lost its fresh appearance.
-									</p>
+								<!-- <div class="service-area__hero-description">
+                                    <p>
+                                        We provide couch and carpet cleaning in Ohio City for customers
+                                        who want a thorough, practical deep clean. Our service is designed
+                                        for everyday soil, high-traffic areas, common spots, pet-related
+                                        buildup, and furniture that has lost its fresh appearance.
+                                    </p>
 
-									<div class="service-area__hero-more">
+                                    <div class="service-area__hero-more">
+                                        <p>
+                                            Our carpet-cleaning process includes pre-vacuuming,
+                                            pre-treatment, brush agitation, and hot-water extraction —
+                                            a multi-step approach that reaches deeper into the fibers
+                                            than regular vacuuming and gives high-traffic areas a more
+                                            complete clean.
+                                        </p>
+
+                                        <p>
+                                            We also clean couches, upholstered furniture, mattresses,
+                                            and other fabric surfaces using professional equipment and
+                                            cleaning methods selected for the material. Our goal is to
+                                            remove embedded dirt, stains, odors, and everyday buildup
+                                            while keeping the cleaning process practical and gentle
+                                            for your home.
+                                        </p>
+
+                                        <p>
+                                            Whether your carpet needs a routine refresh or your furniture
+                                            needs a deeper clean, we make the process simple from the
+                                            initial quote to the final extraction.
+                                        </p>
+                                    </div>
+
+                                    <button class="service-area__hero-toggle" type="button" aria-expanded="false">
+                                        <span class="service-area__hero-toggle-text">
+                                            Read more
+                                        </span>
+
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" aria-hidden="true">
+                                            <path d="m6 9 6 6 6-6" />
+                                        </svg>
+                                    </button>
+                                </div> -->
+
+
+								<div class="content-toggle">
+									<div class="content-toggle__visible">
+										<p>
+											We provide couch and carpet cleaning in Ohio City for customers
+											who want a thorough, practical deep clean. Our service is designed
+											for everyday soil, high-traffic areas, common spots, pet-related
+											buildup, and furniture that has lost its fresh appearance.
+										</p>
+									</div>
+
+									<div class="content-toggle__hidden">
 										<p>
 											Our carpet-cleaning process includes pre-vacuuming,
 											pre-treatment, brush agitation, and hot-water extraction —
@@ -391,17 +440,14 @@
 										</p>
 									</div>
 
-									<button class="service-area__hero-toggle" type="button" aria-expanded="false">
-										<span class="service-area__hero-toggle-text">
-											Read more
-										</span>
+									<button class="content-toggle__button" type="button" aria-expanded="false">
+										<span class="content-toggle__text">Read more</span>
 
 										<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="m6 9 6 6 6-6" />
 										</svg>
 									</button>
 								</div>
-
 
 								<div class="hero__buttons">
 									<a href="#quote" class="hero__button hero__button--primary">
@@ -466,7 +512,7 @@
 					</div>
 
 					<div class="service-area__hero-image">
-						<img src="https://media.base44.com/images/public/6abe4d860dae250a5a7a9d46/b1646e560_generated_image.webp" alt="Professional carpet cleaning in Ohio City">
+						<img src="img/main/pic-va-fresh-steamers-carpet.webp" alt="Professional carpet cleaning in Ohio City">
 					</div>
 				</section>
 
@@ -690,6 +736,836 @@
 
 				<!--  -->
 
+				<div class="service-pricing">
+
+					<div class="service-pricing__container">
+
+						<!-- Pricing -->
+
+						<div class="service-pricing__content">
+
+							<div class="service-pricing__content">
+
+								<div class="service-pricing__card">
+
+									<ul class="service-pricing__list">
+
+										<li class="service-pricing__item">
+											<span class="service-pricing__check">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+											</span>
+
+											<span class="service-pricing__name">
+												Crib Size
+											</span>
+
+											<span class="service-pricing__dots"></span>
+
+											<span class="service-pricing__price">
+												$60
+											</span>
+										</li>
+
+										<li class="service-pricing__item">
+											<span class="service-pricing__check">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+											</span>
+
+											<span class="service-pricing__name">
+												Twin / Full Size
+											</span>
+
+											<span class="service-pricing__dots"></span>
+
+											<span class="service-pricing__price">
+												$80
+											</span>
+										</li>
+
+										<li class="service-pricing__item">
+											<span class="service-pricing__check">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+											</span>
+
+											<span class="service-pricing__name">
+												Queen / King Size
+											</span>
+
+											<span class="service-pricing__dots"></span>
+
+											<span class="service-pricing__price">
+												$115
+											</span>
+										</li>
+
+										<li class="service-pricing__item">
+											<span class="service-pricing__check">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+											</span>
+
+											<span class="service-pricing__name">
+												Headboard
+											</span>
+
+											<span class="service-pricing__dots"></span>
+
+											<span class="service-pricing__price">
+												$70
+											</span>
+										</li>
+
+										<li class="service-pricing__item">
+											<span class="service-pricing__check">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+											</span>
+
+											<span class="service-pricing__name">
+												Bed Frame
+											</span>
+
+											<span class="service-pricing__dots"></span>
+
+											<span class="service-pricing__price">
+												$60
+											</span>
+										</li>
+
+										<li class="service-pricing__item">
+											<span class="service-pricing__check">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+											</span>
+
+											<span class="service-pricing__name">
+												Deodorizer
+											</span>
+
+											<span class="service-pricing__dots"></span>
+
+											<span class="service-pricing__price">
+												$15
+											</span>
+										</li>
+
+										<li class="service-pricing__item">
+											<span class="service-pricing__check">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+											</span>
+
+											<span class="service-pricing__name">
+												Enzyme Treatment
+											</span>
+
+											<span class="service-pricing__dots"></span>
+
+											<span class="service-pricing__price">
+												$15
+											</span>
+										</li>
+
+									</ul>
+
+									<div class="service-pricing__minimum">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+											</path>
+											<circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>
+										</svg>
+
+										<p>
+											Minimum order — $130.
+										</p>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+						<div class="service-pricing-pic">
+							<img src="img/main/pic-va-fresh-steamers-carpet.webp" alt="" class="">
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Reviews -->
+
+				<section class="reviews" id="reviews">
+					<div class="reviews__container container">
+
+						<div class="section-heading section-heading-center">
+							<span class="hero__badge">
+								<span class="hero__badge-dot">
+									<span class="hero__badge-ping"></span>
+									<span class="hero__badge-dot-inner"></span>
+								</span>
+
+								<span>Reviews</span>
+							</span>
+							<h2 class="title">
+								What our<strong>customers </strong> say
+							</h2>
+
+						</div>
+
+						<div class="swiper reviews__slider">
+							<div class="swiper-wrapper">
+
+								<!-- Review 1 -->
+								<div class="swiper-slide">
+									<article class="reviews__card">
+
+										<div class="reviews__stars" aria-label="5 out of 5 stars">
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+										</div>
+
+										<blockquote class="reviews__text">
+											“Absolutely amazing service! Our carpets look brand new again.
+											The team was professional, friendly, and very thorough.”
+										</blockquote>
+
+										<div class="reviews__author">
+											<div class="reviews__avatar">
+												J
+											</div>
+
+											<div>
+												<strong>Jennifer M.</strong>
+												<span>Google Review</span>
+											</div>
+										</div>
+
+									</article>
+								</div>
+
+								<!-- Review 2 -->
+								<div class="swiper-slide">
+									<article class="reviews__card">
+
+										<div class="reviews__stars" aria-label="5 out of 5 stars">
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+										</div>
+
+										<blockquote class="reviews__text">
+											“Absolutely amazing service! Our carpets look brand new again.
+											The team was professional, friendly, and very thorough.”
+										</blockquote>
+
+										<div class="reviews__author">
+											<div class="reviews__avatar">
+												J
+											</div>
+
+											<div>
+												<strong>Jennifer M.</strong>
+												<span>Google Review</span>
+											</div>
+										</div>
+
+									</article>
+								</div>
+
+								<!-- Review 3 -->
+								<div class="swiper-slide">
+									<article class="reviews__card">
+
+										<div class="reviews__stars" aria-label="5 out of 5 stars">
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+										</div>
+
+										<blockquote class="reviews__text">
+											“Fantastic experience from start to finish. On time, great
+											communication, and our upholstery looks incredible.”
+										</blockquote>
+
+										<div class="reviews__author">
+											<div class="reviews__avatar">
+												M
+											</div>
+
+											<div>
+												<strong>Michael R.</strong>
+												<span>Google Review</span>
+											</div>
+										</div>
+
+									</article>
+								</div>
+
+								<!-- Review 4 -->
+								<div class="swiper-slide">
+									<article class="reviews__card">
+
+										<div class="reviews__stars" aria-label="5 out of 5 stars">
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+										</div>
+
+										<blockquote class="reviews__text">
+											“Excellent customer service and excellent cleaning.
+											Everything was explained clearly and the result was perfect.”
+										</blockquote>
+
+										<div class="reviews__author">
+											<div class="reviews__avatar">
+												A
+											</div>
+
+											<div>
+												<strong>Amanda K.</strong>
+												<span>Google Review</span>
+											</div>
+										</div>
+
+									</article>
+								</div>
+
+								<!-- Review 5 -->
+								<div class="swiper-slide">
+									<article class="reviews__card">
+
+										<div class="reviews__stars" aria-label="5 out of 5 stars">
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#d88a35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 fill-[#ad7455] text-[#ad7455]">
+												<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+												</path>
+											</svg>
+										</div>
+
+										<blockquote class="reviews__text">
+											“Super professional and incredibly detailed. I will definitely
+											be using them again for our next cleaning.”
+										</blockquote>
+
+										<div class="reviews__author">
+											<div class="reviews__avatar">
+												D
+											</div>
+
+											<div>
+												<strong>David P.</strong>
+												<span>Google Review</span>
+											</div>
+										</div>
+
+									</article>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="reviews__bottom">
+
+							<div class="reviews__pagination"></div>
+						</div>
+
+					</div>
+				</section>
+
+				<!-- Form -->
+
+				<section id="quote" class="quote bg-light">
+					<div class="quote__decor quote__decor--one"></div>
+					<!-- <div class="quote__decor quote__decor--two"></div>
+				<div class="quote__decor quote__decor--three"></div> -->
+
+					<div class="quote__container">
+
+						<div class="quote__content">
+
+							<div class="quote__intro">
+								<div class="section-heading">
+									<span class="eyebrow"></span>
+									<h2 class="title">
+										Get a free
+										<strong>quote.</strong>
+									</h2>
+
+									<p class="description">
+										Tell us what needs freshening up. We'll reply with a clear,
+										upfront price — no hidden fees, no pressure.
+									</p>
+								</div>
+
+
+								<div class="quote__image">
+									<img src="https://media.base44.com/images/public/6ab4308b755cd0bcf13e3ed7/0a6c87a75_generated_04d3413d.webp" alt="VA Fresh Steamers technician at work">
+
+									<div class="quote__image-overlay"></div>
+
+									<div class="quote__image-badge">
+										<span class="quote__image-badge-icon">VA</span>
+
+										<span>VA Fresh Steamers</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="quote__form-column">
+
+								<form class="quote__form">
+
+									<div class="quote__fields">
+
+										<div class="quote__field">
+											<label for="quote-name">Name</label>
+
+											<input id="quote-name" type="text" name="name" placeholder="John Smith" required>
+										</div>
+
+										<div class="quote__field">
+											<label for="quote-phone">Phone</label>
+
+											<input id="quote-phone" type="tel" name="phone" placeholder="+1 (216) 217-4053" required>
+										</div>
+
+										<div class="quote__field">
+											<label for="quote-email">Email</label>
+
+											<input id="quote-email" type="email" name="email" placeholder="you@email.com" required>
+										</div>
+
+										<div class="quote__field">
+											<label for="quote-zip">Zip Code</label>
+
+											<input id="quote-zip" type="text" name="zip" placeholder="44129" required>
+										</div>
+
+									</div>
+
+
+									<div class="quote__field quote__field--full">
+										<label for="quote-service">Choose a Service</label>
+
+										<div class="quote__select">
+											<select id="quote-service" name="service" required>
+												<option value="">Select a service…</option>
+												<option value="Carpet Cleaning">
+													Carpet Cleaning
+												</option>
+												<option value="Upholstery Cleaning">
+													Upholstery Cleaning
+												</option>
+												<option value="Area Rug Cleaning">
+													Area Rug Cleaning
+												</option>
+												<option value="Mattress Cleaning">
+													Mattress Cleaning
+												</option>
+												<option value="Pet Stain & Odor Removal">
+													Pet Stain & Odor Removal
+												</option>
+												<option value="Tile & Grout Cleaning">
+													Tile & Grout Cleaning
+												</option>
+											</select>
+
+											<i class="fa-solid fa-chevron-down"></i>
+										</div>
+									</div>
+
+
+									<div class="quote__field quote__field--full">
+										<label for="quote-message">
+											How Can We Help You?
+										</label>
+
+										<textarea id="quote-message" name="message" rows="4" placeholder="Tell us about your cleaning needs, stains, pets, room sizes…"></textarea>
+									</div>
+
+
+									<label class="quote__consent">
+
+										<input type="checkbox" name="consent">
+
+										<span>
+											I agree to be contacted about my request and accept the
+											terms & privacy policy.
+										</span>
+
+									</label>
+
+
+									<button type="submit" class="quote__submit">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+											</path>
+
+											<path d="m21.854 2.147-10.94 10.939"></path>
+										</svg>
+
+										<span>I'd Like A Quote</span>
+									</button>
+
+								</form>
+
+
+								<div class="quote__guarantee">
+
+									<div class="quote__guarantee-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+											</path>
+
+											<path d="m9 12 2 2 4-4"></path>
+										</svg>
+									</div>
+
+									<div class="quote__guarantee-content">
+										<h3>100% Satisfaction Guarantee</h3>
+
+										<p>
+											Not happy? We come back and make it right — at no extra cost.
+										</p>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</section>
+
+				<!-- Map -->
+
+				<section class="info-map bg-dark" id="visit" aria-label="Business location and contact information">
+					<div class="info-map__header info-map__container">
+						<div class="section-heading section-heading-center">
+
+							<span class="hero__badge">
+								<span class="hero__badge-dot">
+									<span class="hero__badge-ping"></span>
+									<span class="hero__badge-dot-inner"></span>
+								</span>
+
+								<span>Visit Us</span>
+							</span>
+
+							<h2 class="title">
+								Proudly Serving
+								<strong>Cleveland &amp; 50 Miles</strong>
+							</h2>
+
+							<p class="description">
+								Stop by our location or give us a call — we're happy to talk through your cleaning
+								needs.
+							</p>
+						</div>
+
+					</div>
+
+					<!-- Contact card -->
+					<div class="info-map__card show-mob">
+
+						<div class="info-map__eyebrow">
+							Headquarters
+						</div>
+
+						<h3 class="info-map__card-title">
+							VA Fresh Steamers
+						</h3>
+
+						<div class="info-map__details">
+
+							<div class="info-map__detail">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 1 1 16 0Z">
+									</path>
+									<circle cx="12" cy="10" r="3"></circle>
+								</svg>
+
+								<div>
+									<span class="info-map__detail-label">
+										Address
+									</span>
+
+									<p>
+										3415 Norris Ave, Parma, OH 44134
+									</p>
+								</div>
+							</div>
+
+							<div class="info-map__detail">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z">
+									</path>
+								</svg>
+
+								<div>
+									<span class="info-map__detail-label">
+										Phone
+									</span>
+
+									<a href="tel:+12163155788">
+										+1 (216) 217-4053
+									</a>
+								</div>
+							</div>
+
+							<div class="info-map__detail">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<circle cx="12" cy="12" r="10"></circle>
+									<polyline points="12 6 12 12 16 14"></polyline>
+								</svg>
+
+								<div class="info-map__hours">
+									<span class="info-map__detail-label">
+										Working Hours
+									</span>
+
+									<ul>
+										<li>
+											<span>Monday – Saturday</span>
+											<span>8:00 AM – 9:00 PM</span>
+										</li>
+
+										<li>
+											<span>Sunday</span>
+											<span>Closed</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+
+						<button type="submit" class="quote__submit">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+								</path>
+
+								<path d="m21.854 2.147-10.94 10.939"></path>
+							</svg>
+
+							<span>Get Directions</span>
+						</button>
+
+
+					</div>
+
+					<div class="info-map__map-wrapper">
+
+						<div class="info-map__map" id="business-map"></div>
+
+						<!-- Contact card -->
+
+						<div class="info-map__card hide-mob">
+
+							<div class="info-map__eyebrow">
+								Headquarters
+							</div>
+
+							<h3 class="info-map__card-title">
+								VA Fresh Steamers
+							</h3>
+
+							<div class="info-map__details">
+
+								<div class="info-map__detail">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 1 1 16 0Z">
+										</path>
+										<circle cx="12" cy="10" r="3"></circle>
+									</svg>
+
+									<div>
+										<span class="info-map__detail-label">
+											Address
+										</span>
+
+										<p>
+											3415 Norris Ave, Parma, OH 44134
+										</p>
+									</div>
+								</div>
+
+								<div class="info-map__detail">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z">
+										</path>
+									</svg>
+
+									<div>
+										<span class="info-map__detail-label">
+											Phone
+										</span>
+
+										<a href="tel:+12163155788">
+											+1 (216) 217-4053
+										</a>
+									</div>
+								</div>
+
+								<div class="info-map__detail">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<circle cx="12" cy="12" r="10"></circle>
+										<polyline points="12 6 12 12 16 14"></polyline>
+									</svg>
+
+									<div class="info-map__hours">
+										<span class="info-map__detail-label">
+											Working Hours
+										</span>
+
+										<ul>
+											<li>
+												<span>Monday – Saturday</span>
+												<span>8:00 AM – 9:00 PM</span>
+											</li>
+
+											<li>
+												<span>Sunday</span>
+												<span>Closed</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<button type="submit" class="quote__submit">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+									</path>
+
+									<path d="m21.854 2.147-10.94 10.939"></path>
+								</svg>
+
+								<span>Get Directions</span>
+							</button>
+
+
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 
@@ -703,7 +1579,7 @@
 
 					<div class="footer__about">
 						<div class="footer__brand">
-							<img src="https://media.base44.com/images/public/user_6ab430490078079956a7e95a/4de9fa844_cropped-cropped-logo.webp" alt="VA Fresh Steamers" class="footer__logo">
+							<img src="img/main/logo.webp" alt="VA Fresh Steamers" class="footer__logo">
 
 							<div class="footer__brand-info">
 								<div class="footer__brand-name">
@@ -884,10 +1760,10 @@
 		</footer>
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20261003011837"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20261003011837">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20261003190607"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20261003190607">
 	</script>
-	<script src="js/app.min.js?_v=20261003011837"></script>
+	<script src="js/app.min.js?_v=20261003190607"></script>
 </body>
 
 </html>

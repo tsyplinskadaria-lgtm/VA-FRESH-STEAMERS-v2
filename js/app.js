@@ -31,6 +31,37 @@
         }
     }));
     document.addEventListener("DOMContentLoaded", (() => {
+        try {
+            const toggles = document.querySelectorAll(".content-toggle");
+            if (!toggles.length) return;
+            toggles.forEach((toggle => {
+                const hidden = toggle.querySelector(".content-toggle__hidden");
+                const button = toggle.querySelector(".content-toggle__button");
+                const text = toggle.querySelector(".content-toggle__text");
+                if (!hidden || !button || !text) return;
+                button.addEventListener("click", (() => {
+                    const isOpen = toggle.classList.contains("is-open");
+                    if (isOpen) {
+                        hidden.style.maxHeight = `${hidden.scrollHeight}px`;
+                        requestAnimationFrame((() => {
+                            hidden.style.maxHeight = "0px";
+                        }));
+                        toggle.classList.remove("is-open");
+                        button.setAttribute("aria-expanded", "false");
+                        text.textContent = "Read more";
+                    } else {
+                        hidden.style.maxHeight = `${hidden.scrollHeight}px`;
+                        toggle.classList.add("is-open");
+                        button.setAttribute("aria-expanded", "true");
+                        text.textContent = "Read less";
+                    }
+                }));
+            }));
+        } catch (error) {
+            console.error("Content toggle error:", error);
+        }
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
         const path = window.location.pathname;
         document.querySelectorAll(".menu__item > a").forEach((link => {
             const href = link.getAttribute("href");
@@ -216,9 +247,7 @@
     }));
     document.addEventListener("DOMContentLoaded", (() => {
         try {
-            const faq = document.querySelector(".faq");
-            if (!faq) return;
-            const items = faq.querySelectorAll(".faq__item");
+            const items = document.querySelectorAll(".faq__item");
             if (!items.length) return;
             const closeItem = item => {
                 const answer = item.querySelector(".faq__answer");
@@ -470,21 +499,48 @@
             nextBtn.style.display = hide ? "none" : "";
         }
     }));
+    new Swiper(".before-after__slider2", {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        speed: 600,
+        spaceBetween: 15,
+        navigation: {
+            nextEl: ".before-after__next",
+            prevEl: ".before-after__prev"
+        },
+        pagination: {
+            el: ".before-after__pagination",
+            clickable: true
+        },
+        allowTouchMove: false,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 15
+            },
+            600: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 15
+            }
+        }
+    });
     document.addEventListener("DOMContentLoaded", (() => {
         const mapElement = document.querySelector("#business-map");
         if (!mapElement) return;
         try {
-            const latitude = 41.44454;
-            const longitude = -81.74569;
+            const latitude = 41.4993;
+            const longitude = -81.6944;
             const map = L.map(mapElement, {
                 scrollWheelZoom: false,
                 zoomControl: true
-            }).setView([ latitude, longitude ], 12);
+            }).setView([ latitude, longitude ], 10);
             L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
                 maxZoom: 19,
                 attribution: ""
             }).addTo(map);
-            L.marker([ latitude, longitude ]).addTo(map).bindPopup(`\n        <strong>AV PRO Cleaners</strong><br>\n        Parma, Ohio\n      `);
+            L.marker([ latitude, longitude ]).addTo(map).bindPopup(`\n        <strong>Cleveland</strong><br>\n        50-mile service area\n      `);
             map.getContainer().addEventListener("wheel", (event => {
                 if (!event.ctrlKey) return;
                 event.preventDefault();
@@ -495,6 +551,51 @@
         } catch (error) {
             console.error("Map initialization failed:", error);
         }
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const timelines = document.querySelectorAll(".timeline");
+        if (!timelines.length) return;
+        timelines.forEach((timeline => {
+            const wrapper = timeline.querySelector(".timeline__wrapper");
+            const track = timeline.querySelector(".timeline__track");
+            const progress = timeline.querySelector(".timeline__progress");
+            const dot = timeline.querySelector(".timeline__dot");
+            const rows = [ ...timeline.querySelectorAll(".timeline__row") ];
+            let animationFrame = null;
+            function updateTimeline() {
+                const wrapperRect = wrapper.getBoundingClientRect();
+                const scrollY = window.pageYOffset;
+                const wrapperTop = wrapperRect.top + scrollY;
+                const wrapperHeight = wrapper.offsetHeight;
+                const lineHeight = track.offsetHeight;
+                const start = wrapperTop - window.innerHeight * .45;
+                const end = wrapperTop + wrapperHeight - window.innerHeight * .55;
+                let progressValue = (scrollY - start) / (end - start);
+                progressValue = Math.max(0, Math.min(progressValue, 1));
+                const currentY = progressValue * lineHeight;
+                dot.style.top = `${currentY}px`;
+                progress.style.height = `${currentY}px`;
+                rows.forEach((row => {
+                    const point = row.querySelector(".timeline__point");
+                    const card = row.querySelector(".timeline__card");
+                    if (!point || !card) return;
+                    const pointRect = point.getBoundingClientRect();
+                    const pointY = pointRect.top + scrollY - wrapperTop + point.offsetHeight / 2;
+                    if (currentY >= pointY && !card.classList.contains("show")) card.classList.add("show");
+                    point.classList.toggle("passed", currentY >= pointY);
+                }));
+                animationFrame = null;
+            }
+            function requestTick() {
+                if (animationFrame) return;
+                animationFrame = requestAnimationFrame(updateTimeline);
+            }
+            window.addEventListener("scroll", requestTick, {
+                passive: true
+            });
+            window.addEventListener("resize", requestTick);
+            updateTimeline();
+        }));
     }));
     window["FLS"] = true;
 })();
