@@ -4832,6 +4832,13 @@ html {
 .about-page .about {
   overflow: visible
 }
+.about-page .reviews {
+  background-color: #f6f2e9;
+  background: rgba(0,0,0,0);
+  overflow: hidden;
+  border-radius: 0;
+  margin: 0
+}
 .timeline {
   position: relative;
   padding: 80px 0;
@@ -4992,6 +4999,89 @@ html {
   font-family: Outfit,sans-serif;
   font-weight: 300;
   line-height: 22px
+}
+.faq-page .faq__container {
+  align-items: start
+}
+.faq-page .faq__sidebar {
+  position: sticky;
+  top: 100px
+}
+.faq-page .quote {
+  position: relative;
+  padding: 60px 0 100px 0
+}
+.document-page ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+.document-page ul li {
+  position: relative;
+  padding-left: 20px;
+  color: rgba(10,26,18,.6);
+  font-size: 16px;
+  font-family: Outfit,sans-serif;
+  font-weight: 400;
+  line-height: 22px
+}
+.document-page ul li:after {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background: rgba(0,0,0,.6)
+}
+.document-page .head {
+  margin-top: 100px;
+  background: linear-gradient(to bottom,#f1f8ee 0,#fff 55%,#fff 100%);
+  overflow: hidden;
+  margin: 85px 20px 0 20px;
+  border-radius: 36px;
+  padding: 80px 0 0 0
+}
+.document-page__text {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+  padding: 60px 0
+}
+.document-page__text h2,
+.document-page__text h3,
+.document-page__text h4,
+.document-page__text h5,
+.document-page__text h6 {
+  font-weight: 400;
+  line-height: 40px;
+  color: var(--green-color);
+  font-size: 35px
+}
+.document-page__text p,
+.document-page__text strong {
+  font-family: Outfit,sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(10,26,18,.6);
+  font-size: 16px
+}
+.document-page__text strong {
+  font-weight: 500
+}
+.document-page__text a {
+  color: var(--green-color);
+  transition: color .1s ease-in-out
+}
+.document-page__text a:hover {
+  text-decoration: underline
 }
 @media (max-width:1240px) {
   .single-service-wrapper {
@@ -5282,6 +5372,17 @@ html {
   .single-area .service-pricing__container .service-pricing-pic {
     height: 300px
   }
+  .document-page__text {
+    padding: 50px 0
+  }
+  .document-page__text h2,
+  .document-page__text h3,
+  .document-page__text h4,
+  .document-page__text h5,
+  .document-page__text h6 {
+    line-height: 30px;
+    font-size: 30px
+  }
 }
 @media (max-width:1200px)and (max-width:1200px) {
   .open-menu {
@@ -5508,6 +5609,13 @@ html {
   .single-area .quote {
     padding: 40px 0 80px 0
   }
+  .faq-page .faq {
+    padding: 80px 0 40px 0
+  }
+  .faq-page .faq__sidebar {
+    position: relative;
+    top: auto
+  }
 }
 @media (max-width:1023px) {
   .faq__container {
@@ -5581,6 +5689,14 @@ html {
     max-width: 100%;
     margin: 0!important
   }
+  .document-page .head {
+    padding: 60px 0 0 0
+  }
+  .document-page__text p,
+  .document-page__text strong {
+    font-size: 14px;
+    line-height: 20px
+  }
 }
 @media (max-width:991px) {
   .reviews {
@@ -5622,6 +5738,9 @@ html {
   }
   .service-pricing__price {
     font-size: 20px
+  }
+  .about-page .reviews {
+    padding: 60px 0 40px 0
   }
 }
 @media (max-width:900px) {
@@ -5709,6 +5828,9 @@ html {
   }
   .single-service .services-nav__cta {
     max-width: 100%
+  }
+  .faq-page .quote {
+    padding: 40px 0 60px 0
   }
 }
 @media (max-width:767px) {
@@ -6209,6 +6331,22 @@ html {
     transition: opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1),-webkit-transform .8s cubic-bezier(.22,1,.36,1);
     z-index: 5;
     margin: 0 0 0 -7px
+  }
+  .document-page .head {
+    margin: 0;
+    border-radius: 0;
+    margin-top: 60px
+  }
+  .document-page__text {
+    padding: 40px 0
+  }
+  .document-page__text h2,
+  .document-page__text h3,
+  .document-page__text h4,
+  .document-page__text h5,
+  .document-page__text h6 {
+    line-height: 32px;
+    font-size: 28px
   }
 }
 @media (max-width:575px) {
