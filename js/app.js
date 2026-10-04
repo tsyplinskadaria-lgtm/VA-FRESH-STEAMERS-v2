@@ -350,22 +350,6 @@
         });
         observer.observe(stats);
     }));
-    document.addEventListener("DOMContentLoaded", (() => {
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return rect.top <= window.innerHeight && rect.bottom >= 0;
-        }
-        function handleScroll() {
-            document.querySelectorAll(".animate").forEach((element => {
-                if (isInViewport(element)) {
-                    element.classList.add("active");
-                    element.classList.remove("animate");
-                }
-            }));
-        }
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-    }));
     new Swiper(".before-after__slider", {
         slidesPerView: 3,
         slidesPerGroup: 3,
